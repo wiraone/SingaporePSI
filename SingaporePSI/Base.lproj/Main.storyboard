@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B9C-1w-DmR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A365" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="B9C-1w-DmR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,7 +12,7 @@
         <scene sceneID="i5E-j5-wxW">
             <objects>
                 <navigationController id="B9C-1w-DmR" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="dyx-CM-1Ui">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dyx-CM-1Ui">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.71764705880000002" green="0.19215686269999999" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -30,14 +29,18 @@
         <scene sceneID="gTf-Kr-Asa">
             <objects>
                 <viewController storyboardIdentifier="DashboardViewController" id="QpU-mG-M23" customClass="DashboardViewController" customModule="SingaporePSI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fUQ-xO-yMO"/>
+                        <viewControllerLayoutGuide type="bottom" id="GkJ-dT-hWG"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Tqa-m3-Rgg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YaG-vd-MK7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiD-ob-x6H">
+                                    <searchBar contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiD-ob-x6H" customClass="DateSearchBar" customModule="SingaporePSI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="WWz-Hk-fSx"/>
@@ -65,20 +68,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YaG-vd-MK7" firstAttribute="leading" secondItem="egY-L2-TZK" secondAttribute="leading" id="1sl-jN-VRo"/>
+                            <constraint firstItem="YaG-vd-MK7" firstAttribute="leading" secondItem="Tqa-m3-Rgg" secondAttribute="leading" id="1sl-jN-VRo"/>
                             <constraint firstAttribute="bottom" secondItem="YaG-vd-MK7" secondAttribute="bottom" id="b7y-ZM-JLS"/>
-                            <constraint firstItem="YaG-vd-MK7" firstAttribute="trailing" secondItem="egY-L2-TZK" secondAttribute="trailing" id="h9P-VI-4gv"/>
-                            <constraint firstItem="YaG-vd-MK7" firstAttribute="top" secondItem="egY-L2-TZK" secondAttribute="top" id="rOp-nU-lw7"/>
+                            <constraint firstItem="YaG-vd-MK7" firstAttribute="trailing" secondItem="Tqa-m3-Rgg" secondAttribute="trailing" id="h9P-VI-4gv"/>
+                            <constraint firstItem="YaG-vd-MK7" firstAttribute="top" secondItem="fUQ-xO-yMO" secondAttribute="bottom" id="rOp-nU-lw7"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="egY-L2-TZK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="NiO-sZ-FI5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="PWs-kz-cXZ">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="NiO-sZ-FI5"/>
                     <connections>
                         <outlet property="mapView" destination="eed-Xb-4wo" id="9tl-AD-Hqy"/>
+                        <outlet property="searchBar" destination="EiD-ob-x6H" id="wVL-tu-dwA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bpl-to-JbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

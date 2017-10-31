@@ -1,17 +1,37 @@
 PODS:
   - Alamofire (4.5.1)
+  - Gloss (1.2.4)
+  - Mockingjay (2.0.0):
+    - Mockingjay/Core (= 2.0.0)
+    - Mockingjay/XCTest (= 2.0.0)
+  - Mockingjay/Core (2.0.0):
+    - URITemplate (~> 2.0)
+  - Mockingjay/XCTest (2.0.0):
+    - Mockingjay/Core
+  - Nimble (7.0.2)
   - NVActivityIndicatorView (4.0.0):
     - NVActivityIndicatorView/Presenter (= 4.0.0)
   - NVActivityIndicatorView/Presenter (4.0.0)
+  - Quick (1.2.0)
+  - URITemplate (2.0.2)
 
 DEPENDENCIES:
   - Alamofire
+  - Gloss
+  - Mockingjay
+  - Nimble
   - NVActivityIndicatorView
+  - Quick
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Gloss: 4e036074610fdb993abcb958ebcd7332588e2333
+  Mockingjay: 7122a3fc0597aa63438e4cd9b71b7bc8aac05b87
+  Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   NVActivityIndicatorView: 54c9b93b6f25a4f467512680c0c90c09a1095cf2
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  URITemplate: d822aaa2f8ec9dcffffd13baa58bf9ee007e96cb
 
-PODFILE CHECKSUM: 121c6ddce1eeff0598cb5c868ce97e09728b0e84
+PODFILE CHECKSUM: 1f28a9df35c3f0d97ff173169ef049693b276b7a
 
 COCOAPODS: 1.3.1

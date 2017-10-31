@@ -7,11 +7,15 @@ target 'SingaporePSI' do
 
   # Pods for SingaporePSI
      pod 'Alamofire'
+     pod 'Gloss'
      pod 'NVActivityIndicatorView'
 
   target 'SingaporePSITests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'Mockingjay'
   end
 
 end

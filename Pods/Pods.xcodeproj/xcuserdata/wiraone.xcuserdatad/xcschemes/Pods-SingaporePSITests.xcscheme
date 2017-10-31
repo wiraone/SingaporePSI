@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A41CE8ECC59B88A26C7DAFA73AEEEA91"
+               BlueprintIdentifier = "F0A2680FBB0C83D0F3143C82A692191D"
                BuildableName = "Pods_SingaporePSITests.framework"
                BlueprintName = "Pods-SingaporePSITests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A41CE8ECC59B88A26C7DAFA73AEEEA91"
+            BlueprintIdentifier = "F0A2680FBB0C83D0F3143C82A692191D"
             BuildableName = "Pods_SingaporePSITests.framework"
             BlueprintName = "Pods-SingaporePSITests"
             ReferencedContainer = "container:Pods.xcodeproj">

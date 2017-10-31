@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B07F54CF06D9A4801BC65E5 /* Pods_SingaporePSI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E185B491BC14D74B860D0DA /* Pods_SingaporePSI.framework */; };
-		7AECE05D6279B5F377ECF56B /* Pods_SingaporePSITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46CE3ECE7495CD94F52173A /* Pods_SingaporePSITests.framework */; };
+		416D83F0A5F9AC86335E5692 /* Pods_SingaporePSI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837ED393F57142864E60315C /* Pods_SingaporePSI.framework */; };
+		A82DF0651FA80EBA00E44962 /* DateSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82DF0641FA80EBA00E44962 /* DateSearchBar.swift */; };
 		A85972A81F96F3CD009BEB95 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85972A71F96F3CD009BEB95 /* DashboardViewController.swift */; };
+		A86E0A821FA819F5000D2CA2 /* DashboardViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0A811FA819F5000D2CA2 /* DashboardViewControllerSpec.swift */; };
+		A86E0A841FA81CEE000D2CA2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0A831FA81CEE000D2CA2 /* Location.swift */; };
+		A86E0A861FA81D28000D2CA2 /* RegionMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0A851FA81D28000D2CA2 /* RegionMetadata.swift */; };
+		A86E0A881FA823C9000D2CA2 /* ApiManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0A871FA823C9000D2CA2 /* ApiManagerSpec.swift */; };
+		A86E0A8D1FA82FC1000D2CA2 /* Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0A8C1FA82FC1000D2CA2 /* Reading.swift */; };
+		A86E0A8F1FA830A5000D2CA2 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0A8E1FA830A5000D2CA2 /* Content.swift */; };
+		A86E0A921FA8541D000D2CA2 /* XCTest+FileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0A911FA8541D000D2CA2 /* XCTest+FileManagement.swift */; };
 		A8856BE91F96BA130080D9B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8856BE81F96BA130080D9B7 /* AppDelegate.swift */; };
 		A8856BEE1F96BA130080D9B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8856BEC1F96BA130080D9B7 /* Main.storyboard */; };
 		A8856BF01F96BA130080D9B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8856BEF1F96BA130080D9B7 /* Assets.xcassets */; };
 		A8856BF31F96BA130080D9B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8856BF11F96BA130080D9B7 /* LaunchScreen.storyboard */; };
-		A8856BFE1F96BA130080D9B7 /* SingaporePSITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8856BFD1F96BA130080D9B7 /* SingaporePSITests.swift */; };
+		A8BD4B6A1FA7564F0004B318 /* PSIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD4B691FA7564F0004B318 /* PSIData.swift */; };
+		A8BD4B6C1FA759550004B318 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD4B6B1FA759550004B318 /* AppConstant.swift */; };
+		A8BD4B6F1FA778000004B318 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD4B6E1FA778000004B318 /* Item.swift */; };
+		A8BD4B711FA784C50004B318 /* PSI.json in Resources */ = {isa = PBXBuildFile; fileRef = A8BD4B701FA784C50004B318 /* PSI.json */; };
+		B0508EEAE833D6D086BBDF34 /* Pods_SingaporePSITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24803190FB0B17996E5079EE /* Pods_SingaporePSITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,11 +39,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		196DFC9337BAD75A681F2E9E /* Pods-SingaporePSI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingaporePSI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingaporePSI/Pods-SingaporePSI.debug.xcconfig"; sourceTree = "<group>"; };
-		2C52A15BB9D470B425C334EE /* Pods-SingaporePSITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingaporePSITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingaporePSITests/Pods-SingaporePSITests.release.xcconfig"; sourceTree = "<group>"; };
-		2E185B491BC14D74B860D0DA /* Pods_SingaporePSI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingaporePSI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		925011779E4BF2D41795C586 /* Pods-SingaporePSI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingaporePSI.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingaporePSI/Pods-SingaporePSI.release.xcconfig"; sourceTree = "<group>"; };
+		007315FEB65F9E8A5EF03569 /* Pods-SingaporePSITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingaporePSITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingaporePSITests/Pods-SingaporePSITests.release.xcconfig"; sourceTree = "<group>"; };
+		157C313423492BCA63C258A7 /* Pods-SingaporePSI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingaporePSI.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingaporePSI/Pods-SingaporePSI.release.xcconfig"; sourceTree = "<group>"; };
+		24803190FB0B17996E5079EE /* Pods_SingaporePSITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingaporePSITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		837ED393F57142864E60315C /* Pods_SingaporePSI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingaporePSI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		867BF49E476F0EC0BCE9F899 /* Pods-SingaporePSITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingaporePSITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingaporePSITests/Pods-SingaporePSITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A82DF0641FA80EBA00E44962 /* DateSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSearchBar.swift; sourceTree = "<group>"; };
 		A85972A71F96F3CD009BEB95 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		A86BC42C1FA8083D00701EE8 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A86BC42D1FA8083D00701EE8 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A86C49ED1FA8025D004DA9CD /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A86C49EF1FA80262004DA9CD /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A86E0A811FA819F5000D2CA2 /* DashboardViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewControllerSpec.swift; sourceTree = "<group>"; };
+		A86E0A831FA81CEE000D2CA2 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A86E0A851FA81D28000D2CA2 /* RegionMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionMetadata.swift; sourceTree = "<group>"; };
+		A86E0A871FA823C9000D2CA2 /* ApiManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManagerSpec.swift; sourceTree = "<group>"; };
+		A86E0A8C1FA82FC1000D2CA2 /* Reading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reading.swift; sourceTree = "<group>"; };
+		A86E0A8E1FA830A5000D2CA2 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		A86E0A911FA8541D000D2CA2 /* XCTest+FileManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTest+FileManagement.swift"; sourceTree = "<group>"; };
 		A8856BE51F96BA130080D9B7 /* SingaporePSI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingaporePSI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8856BE81F96BA130080D9B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8856BED1F96BA130080D9B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,10 +64,12 @@
 		A8856BF21F96BA130080D9B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8856BF41F96BA130080D9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8856BF91F96BA130080D9B7 /* SingaporePSITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingaporePSITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8856BFD1F96BA130080D9B7 /* SingaporePSITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingaporePSITests.swift; sourceTree = "<group>"; };
 		A8856BFF1F96BA130080D9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB6D9FCD8D4434C58872FB52 /* Pods-SingaporePSITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingaporePSITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingaporePSITests/Pods-SingaporePSITests.debug.xcconfig"; sourceTree = "<group>"; };
-		B46CE3ECE7495CD94F52173A /* Pods_SingaporePSITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingaporePSITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8BD4B691FA7564F0004B318 /* PSIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSIData.swift; sourceTree = "<group>"; };
+		A8BD4B6B1FA759550004B318 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		A8BD4B6E1FA778000004B318 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A8BD4B701FA784C50004B318 /* PSI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PSI.json; sourceTree = "<group>"; };
+		AF74EE0DBBCF5ADE7E05D233 /* Pods-SingaporePSI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingaporePSI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingaporePSI/Pods-SingaporePSI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B07F54CF06D9A4801BC65E5 /* Pods_SingaporePSI.framework in Frameworks */,
+				416D83F0A5F9AC86335E5692 /* Pods_SingaporePSI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AECE05D6279B5F377ECF56B /* Pods_SingaporePSITests.framework in Frameworks */,
+				B0508EEAE833D6D086BBDF34 /* Pods_SingaporePSITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,22 +95,34 @@
 		001103BD93D01994D3566365 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2E185B491BC14D74B860D0DA /* Pods_SingaporePSI.framework */,
-				B46CE3ECE7495CD94F52173A /* Pods_SingaporePSITests.framework */,
+				A86BC42C1FA8083D00701EE8 /* Nimble.framework */,
+				A86BC42D1FA8083D00701EE8 /* Quick.framework */,
+				A86C49EF1FA80262004DA9CD /* Nimble.framework */,
+				A86C49ED1FA8025D004DA9CD /* Quick.framework */,
+				837ED393F57142864E60315C /* Pods_SingaporePSI.framework */,
+				24803190FB0B17996E5079EE /* Pods_SingaporePSITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A85972A21F96F1AF009BEB95 /* Models */ = {
+		A83B12A21FA6ABDA005009AA /* CustomComponent */ = {
 			isa = PBXGroup;
 			children = (
+				A82DF0641FA80EBA00E44962 /* DateSearchBar.swift */,
 			);
-			path = Models;
+			path = CustomComponent;
 			sourceTree = "<group>";
 		};
 		A85972A31F96F33F009BEB95 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A8BD4B6B1FA759550004B318 /* AppConstant.swift */,
+				A8BD4B691FA7564F0004B318 /* PSIData.swift */,
+				A8BD4B6E1FA778000004B318 /* Item.swift */,
+				A86E0A831FA81CEE000D2CA2 /* Location.swift */,
+				A86E0A851FA81D28000D2CA2 /* RegionMetadata.swift */,
+				A86E0A8C1FA82FC1000D2CA2 /* Reading.swift */,
+				A86E0A8E1FA830A5000D2CA2 /* Content.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -100,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				A85972A71F96F3CD009BEB95 /* DashboardViewController.swift */,
+				A83B12A21FA6ABDA005009AA /* CustomComponent */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -114,6 +153,7 @@
 		A85972A91F96F3E1009BEB95 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A86E0A871FA823C9000D2CA2 /* ApiManagerSpec.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -128,8 +168,18 @@
 		A85972AB1F96F3F7009BEB95 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A86E0A811FA819F5000D2CA2 /* DashboardViewControllerSpec.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A86E0A931FA85943000D2CA2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A86E0A911FA8541D000D2CA2 /* XCTest+FileManagement.swift */,
+			);
+			name = Extension;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A8856BDC1F96BA130080D9B7 = {
@@ -138,8 +188,8 @@
 				A8856BE71F96BA130080D9B7 /* SingaporePSI */,
 				A8856BFC1F96BA130080D9B7 /* SingaporePSITests */,
 				A8856BE61F96BA130080D9B7 /* Products */,
-				CBBF9CE48B089654C21DF8CC /* Pods */,
 				001103BD93D01994D3566365 /* Frameworks */,
+				E37F4576B2FD140712F3CC6A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,23 +221,31 @@
 		A8856BFC1F96BA130080D9B7 /* SingaporePSITests */ = {
 			isa = PBXGroup;
 			children = (
+				A8BD4B6D1FA777E40004B318 /* MockData */,
 				A85972AB1F96F3F7009BEB95 /* Scenes */,
 				A85972AA1F96F3EE009BEB95 /* Workers */,
 				A85972A91F96F3E1009BEB95 /* Services */,
-				A85972A21F96F1AF009BEB95 /* Models */,
-				A8856BFD1F96BA130080D9B7 /* SingaporePSITests.swift */,
 				A8856BFF1F96BA130080D9B7 /* Info.plist */,
 			);
 			path = SingaporePSITests;
 			sourceTree = "<group>";
 		};
-		CBBF9CE48B089654C21DF8CC /* Pods */ = {
+		A8BD4B6D1FA777E40004B318 /* MockData */ = {
 			isa = PBXGroup;
 			children = (
-				196DFC9337BAD75A681F2E9E /* Pods-SingaporePSI.debug.xcconfig */,
-				925011779E4BF2D41795C586 /* Pods-SingaporePSI.release.xcconfig */,
-				AB6D9FCD8D4434C58872FB52 /* Pods-SingaporePSITests.debug.xcconfig */,
-				2C52A15BB9D470B425C334EE /* Pods-SingaporePSITests.release.xcconfig */,
+				A86E0A931FA85943000D2CA2 /* Extension */,
+				A8BD4B701FA784C50004B318 /* PSI.json */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		E37F4576B2FD140712F3CC6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF74EE0DBBCF5ADE7E05D233 /* Pods-SingaporePSI.debug.xcconfig */,
+				157C313423492BCA63C258A7 /* Pods-SingaporePSI.release.xcconfig */,
+				867BF49E476F0EC0BCE9F899 /* Pods-SingaporePSITests.debug.xcconfig */,
+				007315FEB65F9E8A5EF03569 /* Pods-SingaporePSITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -199,12 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8856C021F96BA130080D9B7 /* Build configuration list for PBXNativeTarget "SingaporePSI" */;
 			buildPhases = (
-				D66B2C94C4BC7FB920D4F0FA /* [CP] Check Pods Manifest.lock */,
+				5CF0C417A500045B4BD43812 /* [CP] Check Pods Manifest.lock */,
 				A8856BE11F96BA130080D9B7 /* Sources */,
 				A8856BE21F96BA130080D9B7 /* Frameworks */,
 				A8856BE31F96BA130080D9B7 /* Resources */,
-				B5EC285CC4CB7F0F8D3AAABE /* [CP] Embed Pods Frameworks */,
-				847F214C9807BB158A831D61 /* [CP] Copy Pods Resources */,
+				04DE6C2BF69DC3D744119FB6 /* [CP] Embed Pods Frameworks */,
+				47D449602305221C394787F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,12 +277,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8856C051F96BA130080D9B7 /* Build configuration list for PBXNativeTarget "SingaporePSITests" */;
 			buildPhases = (
-				B3FDE1FC9BCDAB201BC6AD9B /* [CP] Check Pods Manifest.lock */,
+				32A9377DB37663728CABEDB3 /* [CP] Check Pods Manifest.lock */,
 				A8856BF51F96BA130080D9B7 /* Sources */,
 				A8856BF61F96BA130080D9B7 /* Frameworks */,
 				A8856BF71F96BA130080D9B7 /* Resources */,
-				76E8F1F4903BF51E95545A75 /* [CP] Embed Pods Frameworks */,
-				D75E3F351209E7E5B051AE5A /* [CP] Copy Pods Resources */,
+				3F2AAE82575637F92D33A7AC /* [CP] Embed Pods Frameworks */,
+				073A061B578D6B28760D0C9B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,28 +349,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8BD4B711FA784C50004B318 /* PSI.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		76E8F1F4903BF51E95545A75 /* [CP] Embed Pods Frameworks */ = {
+		04DE6C2BF69DC3D744119FB6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SingaporePSI/Pods-SingaporePSI-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingaporePSITests/Pods-SingaporePSITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingaporePSI/Pods-SingaporePSI-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		847F214C9807BB158A831D61 /* [CP] Copy Pods Resources */ = {
+		073A061B578D6B28760D0C9B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -324,10 +390,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingaporePSI/Pods-SingaporePSI-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingaporePSITests/Pods-SingaporePSITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B3FDE1FC9BCDAB201BC6AD9B /* [CP] Check Pods Manifest.lock */ = {
+		32A9377DB37663728CABEDB3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -345,27 +411,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B5EC285CC4CB7F0F8D3AAABE /* [CP] Embed Pods Frameworks */ = {
+		3F2AAE82575637F92D33A7AC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SingaporePSI/Pods-SingaporePSI-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SingaporePSITests/Pods-SingaporePSITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Mockingjay/Mockingjay.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/URITemplate/URITemplate.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mockingjay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URITemplate.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingaporePSI/Pods-SingaporePSI-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingaporePSITests/Pods-SingaporePSITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D66B2C94C4BC7FB920D4F0FA /* [CP] Check Pods Manifest.lock */ = {
+		47D449602305221C394787F4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingaporePSI/Pods-SingaporePSI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CF0C417A500045B4BD43812 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -383,21 +468,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D75E3F351209E7E5B051AE5A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingaporePSITests/Pods-SingaporePSITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -406,7 +476,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8856BE91F96BA130080D9B7 /* AppDelegate.swift in Sources */,
+				A8BD4B6C1FA759550004B318 /* AppConstant.swift in Sources */,
+				A86E0A8D1FA82FC1000D2CA2 /* Reading.swift in Sources */,
+				A86E0A8F1FA830A5000D2CA2 /* Content.swift in Sources */,
+				A8BD4B6A1FA7564F0004B318 /* PSIData.swift in Sources */,
+				A82DF0651FA80EBA00E44962 /* DateSearchBar.swift in Sources */,
+				A86E0A861FA81D28000D2CA2 /* RegionMetadata.swift in Sources */,
+				A8BD4B6F1FA778000004B318 /* Item.swift in Sources */,
 				A85972A81F96F3CD009BEB95 /* DashboardViewController.swift in Sources */,
+				A86E0A841FA81CEE000D2CA2 /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +492,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8856BFE1F96BA130080D9B7 /* SingaporePSITests.swift in Sources */,
+				A86E0A821FA819F5000D2CA2 /* DashboardViewControllerSpec.swift in Sources */,
+				A86E0A881FA823C9000D2CA2 /* ApiManagerSpec.swift in Sources */,
+				A86E0A921FA8541D000D2CA2 /* XCTest+FileManagement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +637,7 @@
 		};
 		A8856C031F96BA130080D9B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 196DFC9337BAD75A681F2E9E /* Pods-SingaporePSI.debug.xcconfig */;
+			baseConfigurationReference = AF74EE0DBBCF5ADE7E05D233 /* Pods-SingaporePSI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -565,16 +645,17 @@
 				INFOPLIST_FILE = SingaporePSI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = Wirawan.SingaporePSI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		A8856C041F96BA130080D9B7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 925011779E4BF2D41795C586 /* Pods-SingaporePSI.release.xcconfig */;
+			baseConfigurationReference = 157C313423492BCA63C258A7 /* Pods-SingaporePSI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -582,25 +663,28 @@
 				INFOPLIST_FILE = SingaporePSI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = Wirawan.SingaporePSI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		A8856C061F96BA130080D9B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB6D9FCD8D4434C58872FB52 /* Pods-SingaporePSITests.debug.xcconfig */;
+			baseConfigurationReference = 867BF49E476F0EC0BCE9F899 /* Pods-SingaporePSITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2ZK7L6TNV;
 				INFOPLIST_FILE = SingaporePSITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = Wirawan.SingaporePSITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingaporePSI.app/SingaporePSI";
 			};
@@ -608,16 +692,18 @@
 		};
 		A8856C071F96BA130080D9B7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C52A15BB9D470B425C334EE /* Pods-SingaporePSITests.release.xcconfig */;
+			baseConfigurationReference = 007315FEB65F9E8A5EF03569 /* Pods-SingaporePSITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2ZK7L6TNV;
 				INFOPLIST_FILE = SingaporePSITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = Wirawan.SingaporePSITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingaporePSI.app/SingaporePSI";
 			};

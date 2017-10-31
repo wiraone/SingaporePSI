@@ -13,6 +13,7 @@ class DashboardViewController: UIViewController {
     
     //MARK: - Properties
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var searchBar: DateSearchBar!
     
     //MARK: - View Life Cycle
     
