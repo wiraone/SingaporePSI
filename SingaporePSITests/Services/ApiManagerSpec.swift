@@ -28,10 +28,13 @@ class ApiManagerSpec: QuickSpec {
                 beforeEach() {
                     let data = self.loadJSONPayload(fileName: "PSI")
                     MockingjayProtocol.addStub(matcher: http(.get, uri: AppConstant.API.baseURL), builder: json(data!))
+                    self.psiData = nil
                 }
                 
                 it("Return data JSON formmatted") {
-                    self.request = APIManager.sharedInstance.fetchPSIData(date: nil, dateTime: nil, completion: { (data, error) in
+                    let param = InputForm()
+                    
+                    self.request = APIManager.sharedInstance.fetchPSIData(param: param, completion: { (data, error) in
                         
                         self.request = nil
                         
@@ -46,16 +49,20 @@ class ApiManagerSpec: QuickSpec {
                     expect(self.psiData?.items?.count).to(equal(1))
                 }
             }
-            
+        }
+        
+        describe("API") {
             context("Test API Request failed") {
                 
                 beforeEach() {
                     let data = self.loadJSONPayload(fileName: "PSI Internal Server Error")
                     MockingjayProtocol.addStub(matcher: http(.get, uri: AppConstant.API.baseURL), builder: json(data!))
+                    self.psiData = nil
                 }
                 
                 it("Return data JSON formmatted") {
-                    self.request = APIManager.sharedInstance.fetchPSIData(date: nil, dateTime: nil, completion: { (data, error) in
+                    let param = InputForm()
+                    self.request = APIManager.sharedInstance.fetchPSIData(param: param, completion: { (data, error) in
                         
                         self.request = nil
                         
@@ -65,18 +72,11 @@ class ApiManagerSpec: QuickSpec {
                             self.psiData = data!
                         }
                     })
-
-                    expect(self.psiData?.regionMetadata?.first?.name).toEventually(equal("national"))
-                    expect(self.psiData?.regionMetadata?.first?.name).toEventually(equal("national"))
-                    expect(self.psiData?.regionMetadata?.first?.name).toEventually(equal("national"))
-                    expect(self.psiData?.regionMetadata?.first?.name).toEventually(equal("national"))
-                    expect(self.psiData?.regionMetadata?.first?.name).toEventually(equal("national"))
                     
                     
-                    expect(self.psiData?.items?.count).to(equal(1))
+                    expect(self.psiData?.items).to(beNil())
                 }
             }
-            
         }
     }
 }

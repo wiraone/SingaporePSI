@@ -11,7 +11,7 @@ import Alamofire
 
 //PSI Endpoint Enum
 enum PSIEndpoint {
-    case fetchData(date: String?, dateTime: String?)
+    case fetchData(param: InputForm)
 }
 
 //Session Router Class based on BaseRouter
@@ -30,15 +30,15 @@ class PSIRouter : BaseRouter {
     
     override var parameters: APIParams {
         switch endpoint {
-        case .fetchData(let date, let dateTime):
+        case .fetchData(let input):
             var param: APIParams = [:]
             
-            if let dateValue = date {
-                param?["date"] = dateValue as AnyObject
+            if input.date.isEmpty == false {
+                param?["date"] = input.date as AnyObject
             }
             
-            if let dateTimeValue = dateTime {
-                param?["date_time"] = dateTimeValue as AnyObject
+            if input.dateTime.isEmpty == false {
+                param?["date_time"] = input.dateTime as AnyObject
             }
             
             return param
@@ -47,7 +47,7 @@ class PSIRouter : BaseRouter {
     
     override var encoding: Alamofire.ParameterEncoding? {
         switch endpoint {
-        case .fetchData: return URLEncoding.default
+        case .fetchData: return JSONEncoding.default
         }
     }
 }

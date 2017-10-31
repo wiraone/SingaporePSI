@@ -8,12 +8,15 @@
 
 import UIKit
 import MapKit
+import Alamofire
 
 class DashboardViewController: UIViewController {
     
     //MARK: - Properties
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var searchBar: DateSearchBar!
+    
+    var request: Request?
     
     //MARK: - View Life Cycle
     
@@ -22,6 +25,7 @@ class DashboardViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.title = AppConstant.Default.title
+        fetchPSIData()
         setupMapView()
     }
 
@@ -51,10 +55,27 @@ extension DashboardViewController: MKMapViewDelegate {
     
 }
 
+//MARK: - DateSearchBarDelegate 
+extension DashboardViewController: DateSearchBarDelegate {
+    func searchPSIOnDate(_ date: String) {
+        fetchPSIData()
+    }
+}
+
 //MARK: - API
 extension DashboardViewController {
     fileprivate func fetchPSIData() {
         let inputForm = InputForm()
-        
+        self.request = APIManager.sharedInstance.fetchPSIData(param: inputForm, completion: { (data, error) in
+            
+            self.request = nil
+            
+            if let errorValid = error {
+                print(errorValid)
+            } else {
+                print(data)
+            }
+        })
+
     }
 }
