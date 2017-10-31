@@ -8,14 +8,38 @@
 
 import UIKit
 
+protocol DateSearchBarDelegate {
+    func searchPSIOnDate(_ date: String)
+}
+
 class DateSearchBar: UISearchBar {
+    
+}
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+extension DateSearchBar: UISearchBarDelegate {
+    fileprivate func addToolBar() {
+    
     }
-    */
-
+    
+    fileprivate func showDatePicker(_ datePickerMode: UIDatePickerMode) {
+        let datePicker = UIDatePicker.init()
+        
+        datePicker.datePickerMode = datePickerMode
+        datePicker.date = Date.init()
+        datePicker.addTarget(self, action: #selector(self.datePickerValueChanged), for: UIControlEvents.valueChanged)
+        
+    }
+    
+    func datePickerValueChanged(sender: UIDatePicker) {
+        self.text = Utility.convertDateToString(sender.date, dateFormatForm: AppConstant.DateFormat.date)
+    }
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        showDatePicker(.dateAndTime)
+        return false
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
 }

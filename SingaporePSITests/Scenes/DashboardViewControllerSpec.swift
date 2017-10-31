@@ -16,7 +16,7 @@ class DashboardViewControllerSpec: QuickSpec {
     override func spec() {
         var subject: DashboardViewController!
         
-        describe("DashboardViewControllerSpec") {
+        describe("Check UI Component Exist") {
             beforeEach {
                 subject = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
                 _ = subject.view
@@ -33,7 +33,6 @@ class DashboardViewControllerSpec: QuickSpec {
                     expect(subject.mapView != nil).to(beTrue())
                 }
             }
-            
         }
     }
 }

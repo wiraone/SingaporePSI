@@ -21,6 +21,7 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = AppConstant.Default.title
         setupMapView()
     }
 
@@ -48,4 +49,12 @@ extension DashboardViewController {
 //MARK: - MKMapViewDelegate
 extension DashboardViewController: MKMapViewDelegate {
     
+}
+
+//MARK: - API
+extension DashboardViewController {
+    fileprivate func fetchPSIData() {
+        let inputForm = InputForm()
+        
+    }
 }

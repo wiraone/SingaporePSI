@@ -17,6 +17,17 @@
 		A86E0A8D1FA82FC1000D2CA2 /* Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0A8C1FA82FC1000D2CA2 /* Reading.swift */; };
 		A86E0A8F1FA830A5000D2CA2 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0A8E1FA830A5000D2CA2 /* Content.swift */; };
 		A86E0A921FA8541D000D2CA2 /* XCTest+FileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0A911FA8541D000D2CA2 /* XCTest+FileManagement.swift */; };
+		A86E0A971FA86760000D2CA2 /* PSI Internal Server Error.json in Resources */ = {isa = PBXBuildFile; fileRef = A86E0A961FA86760000D2CA2 /* PSI Internal Server Error.json */; };
+		A86E0A991FA86886000D2CA2 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0A981FA86886000D2CA2 /* ApiManager.swift */; };
+		A86E0A9B1FA86894000D2CA2 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0A9A1FA86894000D2CA2 /* ErrorHandler.swift */; };
+		A86E0A9E1FA887E7000D2CA2 /* PSI Bad Request.json in Resources */ = {isa = PBXBuildFile; fileRef = A86E0A9D1FA887E7000D2CA2 /* PSI Bad Request.json */; };
+		A86E0AA11FA88A1E000D2CA2 /* ApiManager+FetchPSIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0AA01FA88A1E000D2CA2 /* ApiManager+FetchPSIData.swift */; };
+		A86E0AA31FA88A31000D2CA2 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0AA21FA88A31000D2CA2 /* BaseRouter.swift */; };
+		A86E0AA71FA8AD78000D2CA2 /* PSIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0AA61FA8AD78000D2CA2 /* PSIRouter.swift */; };
+		A86E0AAA1FA8B5F0000D2CA2 /* InputForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0AA91FA8B5F0000D2CA2 /* InputForm.swift */; };
+		A86E0AAD1FA8B64E000D2CA2 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0AAC1FA8B64E000D2CA2 /* Utility.swift */; };
+		A86E0AB01FA8D139000D2CA2 /* InputFormSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0AAF1FA8D139000D2CA2 /* InputFormSpec.swift */; };
+		A86E0AB21FA8DB6B000D2CA2 /* UtilitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0AB11FA8DB6B000D2CA2 /* UtilitySpec.swift */; };
 		A8856BE91F96BA130080D9B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8856BE81F96BA130080D9B7 /* AppDelegate.swift */; };
 		A8856BEE1F96BA130080D9B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8856BEC1F96BA130080D9B7 /* Main.storyboard */; };
 		A8856BF01F96BA130080D9B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8856BEF1F96BA130080D9B7 /* Assets.xcassets */; };
@@ -57,6 +68,17 @@
 		A86E0A8C1FA82FC1000D2CA2 /* Reading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reading.swift; sourceTree = "<group>"; };
 		A86E0A8E1FA830A5000D2CA2 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		A86E0A911FA8541D000D2CA2 /* XCTest+FileManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTest+FileManagement.swift"; sourceTree = "<group>"; };
+		A86E0A961FA86760000D2CA2 /* PSI Internal Server Error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PSI Internal Server Error.json"; sourceTree = "<group>"; };
+		A86E0A981FA86886000D2CA2 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		A86E0A9A1FA86894000D2CA2 /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		A86E0A9D1FA887E7000D2CA2 /* PSI Bad Request.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PSI Bad Request.json"; sourceTree = "<group>"; };
+		A86E0AA01FA88A1E000D2CA2 /* ApiManager+FetchPSIData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ApiManager+FetchPSIData.swift"; sourceTree = "<group>"; };
+		A86E0AA21FA88A31000D2CA2 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		A86E0AA61FA8AD78000D2CA2 /* PSIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSIRouter.swift; sourceTree = "<group>"; };
+		A86E0AA91FA8B5F0000D2CA2 /* InputForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputForm.swift; sourceTree = "<group>"; };
+		A86E0AAC1FA8B64E000D2CA2 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		A86E0AAF1FA8D139000D2CA2 /* InputFormSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFormSpec.swift; sourceTree = "<group>"; };
+		A86E0AB11FA8DB6B000D2CA2 /* UtilitySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilitySpec.swift; sourceTree = "<group>"; };
 		A8856BE51F96BA130080D9B7 /* SingaporePSI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingaporePSI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8856BE81F96BA130080D9B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8856BED1F96BA130080D9B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,13 +138,10 @@
 		A85972A31F96F33F009BEB95 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A8BD4B6B1FA759550004B318 /* AppConstant.swift */,
-				A8BD4B691FA7564F0004B318 /* PSIData.swift */,
-				A8BD4B6E1FA778000004B318 /* Item.swift */,
-				A86E0A831FA81CEE000D2CA2 /* Location.swift */,
-				A86E0A851FA81D28000D2CA2 /* RegionMetadata.swift */,
-				A86E0A8C1FA82FC1000D2CA2 /* Reading.swift */,
-				A86E0A8E1FA830A5000D2CA2 /* Content.swift */,
+				A86E0AAB1FA8B640000D2CA2 /* Utility */,
+				A86E0AA81FA8B5C9000D2CA2 /* InputForm */,
+				A86E0AA51FA88ABB000D2CA2 /* Constant */,
+				A86E0AA41FA88AAF000D2CA2 /* PSIData */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,6 +165,8 @@
 		A85972A61F96F36E009BEB95 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A86E0A9F1FA8895E000D2CA2 /* Network */,
+				A86E0A9C1FA88772000D2CA2 /* ErrorHandler */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -156,13 +177,6 @@
 				A86E0A871FA823C9000D2CA2 /* ApiManagerSpec.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		A85972AA1F96F3EE009BEB95 /* Workers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Workers;
 			sourceTree = "<group>";
 		};
 		A85972AB1F96F3F7009BEB95 /* Scenes */ = {
@@ -180,6 +194,71 @@
 			);
 			name = Extension;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		A86E0A9C1FA88772000D2CA2 /* ErrorHandler */ = {
+			isa = PBXGroup;
+			children = (
+				A86E0A9A1FA86894000D2CA2 /* ErrorHandler.swift */,
+			);
+			name = ErrorHandler;
+			sourceTree = "<group>";
+		};
+		A86E0A9F1FA8895E000D2CA2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A86E0A981FA86886000D2CA2 /* ApiManager.swift */,
+				A86E0AA01FA88A1E000D2CA2 /* ApiManager+FetchPSIData.swift */,
+				A86E0AA21FA88A31000D2CA2 /* BaseRouter.swift */,
+				A86E0AA61FA8AD78000D2CA2 /* PSIRouter.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		A86E0AA41FA88AAF000D2CA2 /* PSIData */ = {
+			isa = PBXGroup;
+			children = (
+				A8BD4B691FA7564F0004B318 /* PSIData.swift */,
+				A8BD4B6E1FA778000004B318 /* Item.swift */,
+				A86E0A831FA81CEE000D2CA2 /* Location.swift */,
+				A86E0A851FA81D28000D2CA2 /* RegionMetadata.swift */,
+				A86E0A8C1FA82FC1000D2CA2 /* Reading.swift */,
+				A86E0A8E1FA830A5000D2CA2 /* Content.swift */,
+			);
+			name = PSIData;
+			sourceTree = "<group>";
+		};
+		A86E0AA51FA88ABB000D2CA2 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				A8BD4B6B1FA759550004B318 /* AppConstant.swift */,
+			);
+			name = Constant;
+			sourceTree = "<group>";
+		};
+		A86E0AA81FA8B5C9000D2CA2 /* InputForm */ = {
+			isa = PBXGroup;
+			children = (
+				A86E0AA91FA8B5F0000D2CA2 /* InputForm.swift */,
+			);
+			name = InputForm;
+			sourceTree = "<group>";
+		};
+		A86E0AAB1FA8B640000D2CA2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A86E0AAC1FA8B64E000D2CA2 /* Utility.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		A86E0AAE1FA8D0F8000D2CA2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A86E0AAF1FA8D139000D2CA2 /* InputFormSpec.swift */,
+				A86E0AB11FA8DB6B000D2CA2 /* UtilitySpec.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A8856BDC1F96BA130080D9B7 = {
@@ -221,9 +300,9 @@
 		A8856BFC1F96BA130080D9B7 /* SingaporePSITests */ = {
 			isa = PBXGroup;
 			children = (
+				A86E0AAE1FA8D0F8000D2CA2 /* Models */,
 				A8BD4B6D1FA777E40004B318 /* MockData */,
 				A85972AB1F96F3F7009BEB95 /* Scenes */,
-				A85972AA1F96F3EE009BEB95 /* Workers */,
 				A85972A91F96F3E1009BEB95 /* Services */,
 				A8856BFF1F96BA130080D9B7 /* Info.plist */,
 			);
@@ -234,7 +313,9 @@
 			isa = PBXGroup;
 			children = (
 				A86E0A931FA85943000D2CA2 /* Extension */,
+				A86E0A961FA86760000D2CA2 /* PSI Internal Server Error.json */,
 				A8BD4B701FA784C50004B318 /* PSI.json */,
+				A86E0A9D1FA887E7000D2CA2 /* PSI Bad Request.json */,
 			);
 			path = MockData;
 			sourceTree = "<group>";
@@ -349,6 +430,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A86E0A9E1FA887E7000D2CA2 /* PSI Bad Request.json in Resources */,
+				A86E0A971FA86760000D2CA2 /* PSI Internal Server Error.json in Resources */,
 				A8BD4B711FA784C50004B318 /* PSI.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,16 +558,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A86E0AA11FA88A1E000D2CA2 /* ApiManager+FetchPSIData.swift in Sources */,
 				A8856BE91F96BA130080D9B7 /* AppDelegate.swift in Sources */,
 				A8BD4B6C1FA759550004B318 /* AppConstant.swift in Sources */,
 				A86E0A8D1FA82FC1000D2CA2 /* Reading.swift in Sources */,
 				A86E0A8F1FA830A5000D2CA2 /* Content.swift in Sources */,
 				A8BD4B6A1FA7564F0004B318 /* PSIData.swift in Sources */,
 				A82DF0651FA80EBA00E44962 /* DateSearchBar.swift in Sources */,
+				A86E0A991FA86886000D2CA2 /* ApiManager.swift in Sources */,
 				A86E0A861FA81D28000D2CA2 /* RegionMetadata.swift in Sources */,
+				A86E0AA31FA88A31000D2CA2 /* BaseRouter.swift in Sources */,
 				A8BD4B6F1FA778000004B318 /* Item.swift in Sources */,
+				A86E0A9B1FA86894000D2CA2 /* ErrorHandler.swift in Sources */,
 				A85972A81F96F3CD009BEB95 /* DashboardViewController.swift in Sources */,
+				A86E0AA71FA8AD78000D2CA2 /* PSIRouter.swift in Sources */,
+				A86E0AAA1FA8B5F0000D2CA2 /* InputForm.swift in Sources */,
 				A86E0A841FA81CEE000D2CA2 /* Location.swift in Sources */,
+				A86E0AAD1FA8B64E000D2CA2 /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +583,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A86E0A821FA819F5000D2CA2 /* DashboardViewControllerSpec.swift in Sources */,
+				A86E0AB01FA8D139000D2CA2 /* InputFormSpec.swift in Sources */,
 				A86E0A881FA823C9000D2CA2 /* ApiManagerSpec.swift in Sources */,
+				A86E0AB21FA8DB6B000D2CA2 /* UtilitySpec.swift in Sources */,
 				A86E0A921FA8541D000D2CA2 /* XCTest+FileManagement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,7 +733,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2UEQ8V476M;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SingaporePSI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -649,7 +741,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Wirawan.SingaporePSI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -659,7 +751,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2UEQ8V476M;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SingaporePSI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -667,7 +759,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Wirawan.SingaporePSI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -18,10 +18,29 @@ struct AppConstant {
         static let apiConsumerKey = "7AE7nJ3wgqgRVMExu04EVA1V8gEuRcWe"
     }
     
+    struct Header {
+        static let apiKey = "api-key"
+    }
+    
+    struct ErrorCode {
+        static let undefined = 0
+    }
+    
+    struct Validation {
+        static let emptyDate = "Date cannot be empty"
+    }
+    
+    struct DateFormat {
+        static let date            = "yyyy-MM-dd"
+        static let dateAndTime     = "YYYY-MM-ddTHH:mm:ss"
+        static let defaultDateTime = "YYYY-MM-dd HH:mm:ss Z"
+    }
+    
     struct Default {
         static let emptyString     = ""
         static let emptyNumber     = 0.0
         static let emptyJSON: JSON = [:]
+        static let title           = "Pollutant Standart Index"
     }
     
     struct JSONKey {
@@ -58,7 +77,7 @@ struct AppConstant {
             static let so2TwentyFouHourly   = "so2_twenty_four_hourly"
             static let no2OneHourMax        = "no2_one_hour_max"
             static let pm25SubIndex         = "pm25_sub_index"
-            static let psiTwentyDourHourly  = "psi_twenty_four_hourly"
+            static let psiTwentyFourHourly  = "psi_twenty_four_hourly"
             static let o3EightHourMax       = "o3_eight_hour_max"
             static let psiThreehourly       = "psi_three_hourly"
         }

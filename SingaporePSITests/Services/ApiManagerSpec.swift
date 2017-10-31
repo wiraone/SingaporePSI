@@ -18,31 +18,65 @@ import Foundation
 class ApiManagerSpec: QuickSpec {
     
     var psiData: PSIData?
+    var request: Request?
+    var psiErrorHandler: PSIErrorHandler?
     
     override func spec() {
         describe("API") {
-            context("test get request") {
+            context("Test API Request successfull") {
                 
                 beforeEach() {
                     let data = self.loadJSONPayload(fileName: "PSI")
                     MockingjayProtocol.addStub(matcher: http(.get, uri: AppConstant.API.baseURL), builder: json(data!))
                 }
                 
-                it("return json") {
-                    let endPointURL = URL.init(string: AppConstant.API.baseURL)
-                    Alamofire.request(endPointURL!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
-                        .responseJSON { response in
-                            switch response.result {
-                            case .success(let value):
-                                
-                                self.psiData = PSIData.init(json: (value as? JSON)!)
-                            case .failure(let error):
-                                print(error)
-                            }
-                    }
+                it("Return data JSON formmatted") {
+                    self.request = APIManager.sharedInstance.fetchPSIData(date: nil, dateTime: nil, completion: { (data, error) in
+                        
+                        self.request = nil
+                        
+                        if let errorValid = error {
+                            print(errorValid)
+                        } else {
+                            self.psiData = data!
+                        }
+                    })
+                    
                     expect(self.psiData?.regionMetadata?.first?.name).toEventually(equal("national"))
+                    expect(self.psiData?.items?.count).to(equal(1))
                 }
             }
+            
+            context("Test API Request failed") {
+                
+                beforeEach() {
+                    let data = self.loadJSONPayload(fileName: "PSI Internal Server Error")
+                    MockingjayProtocol.addStub(matcher: http(.get, uri: AppConstant.API.baseURL), builder: json(data!))
+                }
+                
+                it("Return data JSON formmatted") {
+                    self.request = APIManager.sharedInstance.fetchPSIData(date: nil, dateTime: nil, completion: { (data, error) in
+                        
+                        self.request = nil
+                        
+                        if let errorValid = error {
+                            print(errorValid)
+                        } else {
+                            self.psiData = data!
+                        }
+                    })
+
+                    expect(self.psiData?.regionMetadata?.first?.name).toEventually(equal("national"))
+                    expect(self.psiData?.regionMetadata?.first?.name).toEventually(equal("national"))
+                    expect(self.psiData?.regionMetadata?.first?.name).toEventually(equal("national"))
+                    expect(self.psiData?.regionMetadata?.first?.name).toEventually(equal("national"))
+                    expect(self.psiData?.regionMetadata?.first?.name).toEventually(equal("national"))
+                    
+                    
+                    expect(self.psiData?.items?.count).to(equal(1))
+                }
+            }
+            
         }
     }
 }
