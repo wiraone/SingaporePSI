@@ -10,12 +10,12 @@ import Foundation
 import Gloss
 
 struct Content: Glossy {
-    var national: Int?
-    var south: Int?
-    var north: Int?
-    var east: Int?
-    var central: Int?
-    var west: Int?
+    var national: Double?
+    var south: Double?
+    var north: Double?
+    var east: Double?
+    var central: Double?
+    var west: Double?
     
     init?(json: JSON) {
         self.national = AppConstant.JSONKey.Content.national <~~ json

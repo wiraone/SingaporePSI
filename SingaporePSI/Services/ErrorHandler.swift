@@ -6,6 +6,7 @@
 //  Copyright © 2017 Wirawan. All rights reserved.
 //
 
+import UIKit
 import Foundation
 import Gloss
 
@@ -17,6 +18,12 @@ class PSIErrorHandler {
     init() {
         errorTitle = AppConstant.Default.title
         errorMessage = AppConstant.Default.emptyString
+        errorCode = AppConstant.ErrorCode.undefined
+    }
+    
+    init(with error: Error) {
+        errorTitle = AppConstant.Default.title
+        errorMessage = error.localizedDescription
         errorCode = AppConstant.ErrorCode.undefined
     }
 }

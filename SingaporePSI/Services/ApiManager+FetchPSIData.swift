@@ -25,11 +25,19 @@ extension APIManager {
                 if let statusCode: Int = (response.response?.statusCode) {
                     switch statusCode {
                     case 200 ... 299:
-                        print("API Success", response.result.debugDescription)
-                        
+
                         if let value = response.result.value as? JSON {
                             let data = PSIData.init(json: value)
-                            completion(data, nil)
+                            
+                            if let _ = data?.fault?.faultString?.isEmpty {
+                                completion(data, nil)
+                            }
+                            else {
+                                let errorHandler = PSIErrorHandler.init()
+                                errorHandler.errorCode = AppConstant.API.Error.Code.internalServerError
+                                errorHandler.errorMessage = AppConstant.API.Error.Message.internalServerError
+                                completion(nil, errorHandler)
+                            }
                         }
                         else{
                             let error = PSIErrorHandler.init()
@@ -37,14 +45,27 @@ extension APIManager {
                         }
                     case 400 ... 403:
                         //handle custom error on completion
-                        print("API Failure", response.result.debugDescription)
-                        return
+                        let errorHandler = PSIErrorHandler.init()
+                        errorHandler.errorCode = statusCode
                         
-                    default:
-                        if let error = response.result.error {
-                            print("Default Error: %@", error.localizedDescription)
-                            return
+                        if statusCode == AppConstant.API.Error.Code.badRequest {
+                            
+                            if let value = response.result.value as? JSON {
+                                errorHandler.errorMessage = value[AppConstant.JSONKey.Error.message] as? String
+                            }
                         }
+                        completion(nil, errorHandler)
+                    default:
+                        let errorHandler = PSIErrorHandler.init()
+                        errorHandler.errorCode = statusCode
+                        errorHandler.errorMessage = AppConstant.API.Error.Message.internalServerError
+                        completion(nil, errorHandler)
+                    }
+                }
+                else {
+                    if let error = response.result.error {
+                        let errorHandler = PSIErrorHandler.init(with: error)
+                        completion(nil, errorHandler)
                     }
                 }
             })

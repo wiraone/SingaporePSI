@@ -84,29 +84,44 @@ class ApiManagerSpec: QuickSpec {
     
     override func spec() {
         describe("API") {
-            context("Test API Request successfull") {
+            context("Test API Request failed invalid date format") {
                 
                 beforeEach() {
-                    let data = self.loadJSONPayload(fileName: "PSI")
-                    MockingjayProtocol.addStub(matcher: http(.get, uri: AppConstant.API.baseURL), builder: json(data!))
+                    self.stub(everything, http(400))
                 }
                 
                 it("Return data JSON formmatted") {
-                    let endPointURL = URL.init(string: AppConstant.API.baseURL)
-                    Alamofire.request(endPointURL!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
-                        .responseJSON { response in
-                            switch response.result {
-                            case .success(let value):
+                    waitUntil(timeout: 60) { done in
+                        let param = InputForm()
+                        let router = PSIRouter(endpoint: PSIEndpoint.fetchData(param: param))
+                        
+                        APIManager.sharedInstance.manager.request(router)
+                            .validate()
+                            .responseJSON(completionHandler: {
+                                (response) -> Void in
+                                var errorHandler: PSIErrorHandler? = nil
                                 
-                                self.psiData = PSIData.init(json: (value as? JSON)!)
-                            case .failure(let error):
-                                print(error)
-                            }
+                                if let statusCode: Int = (response.response?.statusCode) {
+                                    switch statusCode {
+                                    case 400 ... 403:
+                                        //handle custom error on completion
+                                        errorHandler = PSIErrorHandler.init()
+                                        errorHandler?.errorCode = statusCode
+                                        
+                                        if statusCode == AppConstant.API.Error.Code.badRequest {
+                                            errorHandler?.errorMessage = AppConstant.API.Error.Message.invalidDateFormat
+                                        }
+                                    default:
+                                         errorHandler = PSIErrorHandler.init()
+                                    }
+                                }
+                                expect(errorHandler?.errorMessage).to(equal(AppConstant.API.Error.Message.invalidDateFormat))
+                                done()
+                            })
                     }
-                    expect(self.psiData?.regionMetadata?.first?.name).toEventually(equal("national"))
-                    expect(self.psiData?.items?.count).to(equal(1))
                 }
-            }    
+            }
+
         }
     }
 }

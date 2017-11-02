@@ -23,12 +23,6 @@ class DashboardViewControllerSpec: QuickSpec {
             }
         
             context("when view is loaded") {
-                it("should have empty search bar text") {
-                    expect(subject.searchBar.text?.isEmpty).to(beTrue())
-                }
-            }
-            
-            context("when view is loaded") {
                 it("should have map view") {
                     expect(subject.mapView != nil).to(beTrue())
                 }

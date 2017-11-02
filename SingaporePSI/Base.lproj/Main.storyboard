@@ -7,15 +7,23 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="i5E-j5-wxW">
             <objects>
                 <navigationController id="B9C-1w-DmR" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dyx-CM-1Ui">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="dyx-CM-1Ui">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.71764705880000002" green="0.19215686269999999" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="QpU-mG-M23" kind="relationship" relationship="rootViewController" id="fPm-bX-INX"/>
@@ -37,47 +45,39 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YaG-vd-MK7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <subviews>
-                                    <searchBar contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiD-ob-x6H" customClass="DateSearchBar" customModule="SingaporePSI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="WWz-Hk-fSx"/>
-                                        </constraints>
-                                        <color key="barTintColor" red="0.71764705880000002" green="0.19215686269999999" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eed-Xb-4wo">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="547"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="QpU-mG-M23" id="piM-Or-aZO"/>
-                                        </connections>
-                                    </mapView>
-                                </subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lTS-IL-AxH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QpU-mG-M23" id="4WY-cn-Y1P"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgt-NS-ih2">
+                                <rect key="frame" x="0.0" y="553" width="375" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="eed-Xb-4wo" firstAttribute="leading" secondItem="YaG-vd-MK7" secondAttribute="leading" id="3Fu-Gj-UsI"/>
-                                    <constraint firstItem="EiD-ob-x6H" firstAttribute="top" secondItem="YaG-vd-MK7" secondAttribute="top" id="Faj-Ql-Xcc"/>
-                                    <constraint firstItem="eed-Xb-4wo" firstAttribute="top" secondItem="EiD-ob-x6H" secondAttribute="bottom" id="QEc-uj-46v"/>
-                                    <constraint firstAttribute="trailing" secondItem="eed-Xb-4wo" secondAttribute="trailing" id="k7Z-nu-as5"/>
-                                    <constraint firstItem="EiD-ob-x6H" firstAttribute="leading" secondItem="YaG-vd-MK7" secondAttribute="leading" id="ntl-qy-0t6"/>
-                                    <constraint firstAttribute="trailing" secondItem="EiD-ob-x6H" secondAttribute="trailing" id="vto-TA-rXw"/>
-                                    <constraint firstAttribute="bottom" secondItem="eed-Xb-4wo" secondAttribute="bottom" id="wcS-xO-NR8"/>
+                                    <constraint firstAttribute="height" constant="50" id="we1-KJ-bcJ"/>
                                 </constraints>
-                            </stackView>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="ic_date_range">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YaG-vd-MK7" firstAttribute="leading" secondItem="Tqa-m3-Rgg" secondAttribute="leading" id="1sl-jN-VRo"/>
-                            <constraint firstAttribute="bottom" secondItem="YaG-vd-MK7" secondAttribute="bottom" id="b7y-ZM-JLS"/>
-                            <constraint firstItem="YaG-vd-MK7" firstAttribute="trailing" secondItem="Tqa-m3-Rgg" secondAttribute="trailing" id="h9P-VI-4gv"/>
-                            <constraint firstItem="YaG-vd-MK7" firstAttribute="top" secondItem="fUQ-xO-yMO" secondAttribute="bottom" id="rOp-nU-lw7"/>
+                            <constraint firstAttribute="trailing" secondItem="lTS-IL-AxH" secondAttribute="trailing" id="DvA-97-xqK"/>
+                            <constraint firstItem="Wgt-NS-ih2" firstAttribute="top" secondItem="lTS-IL-AxH" secondAttribute="bottom" id="FjD-l8-i42"/>
+                            <constraint firstItem="lTS-IL-AxH" firstAttribute="leading" secondItem="Tqa-m3-Rgg" secondAttribute="leading" id="Uxa-f9-cbA"/>
+                            <constraint firstItem="lTS-IL-AxH" firstAttribute="top" secondItem="fUQ-xO-yMO" secondAttribute="bottom" id="VWU-4c-hlN"/>
+                            <constraint firstAttribute="trailing" secondItem="Wgt-NS-ih2" secondAttribute="trailing" id="VvP-a4-Hai"/>
+                            <constraint firstItem="GkJ-dT-hWG" firstAttribute="top" secondItem="Wgt-NS-ih2" secondAttribute="bottom" id="dvV-KS-mnn"/>
+                            <constraint firstItem="Wgt-NS-ih2" firstAttribute="leading" secondItem="Tqa-m3-Rgg" secondAttribute="leading" id="h2w-M2-MZT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NiO-sZ-FI5"/>
                     <connections>
-                        <outlet property="mapView" destination="eed-Xb-4wo" id="9tl-AD-Hqy"/>
-                        <outlet property="searchBar" destination="EiD-ob-x6H" id="wVL-tu-dwA"/>
+                        <outlet property="mapView" destination="lTS-IL-AxH" id="c1h-Av-atU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bpl-to-JbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -85,4 +85,7 @@
             <point key="canvasLocation" x="-23.199999999999999" y="25.637181409295355"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_date_range" width="24" height="24"/>
+    </resources>
 </document>

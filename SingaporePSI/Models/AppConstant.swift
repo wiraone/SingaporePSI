@@ -6,6 +6,7 @@
 //  Copyright © 2017 Wirawan. All rights reserved.
 //
 
+import MapKit
 import Foundation
 import Gloss
 
@@ -16,6 +17,21 @@ struct AppConstant {
     struct API {
         static let baseURL = "https://api.data.gov.sg/v1/environment/psi"
         static let apiConsumerKey = "7AE7nJ3wgqgRVMExu04EVA1V8gEuRcWe"
+        
+        struct Error {
+            struct Code
+            {
+                static let internalServerError = 500
+                static let badRequest = 400
+            }
+            
+            struct Message {
+                static let internalServerError = "Internal server error"
+                static let badRequest = "Bad request"
+                static let invalidDateFormat = "invalid date format"
+                static let quotaExceedLimit = "Rate limit quota violation. Quota limit  exceeded. Identifier : _default"
+            }
+        }
     }
     
     struct Header {
@@ -41,6 +57,32 @@ struct AppConstant {
         static let emptyNumber     = 0.0
         static let emptyJSON: JSON = [:]
         static let title           = "Pollutant Standart Index"
+    }
+    
+    struct Font {
+        
+        struct Name {
+            
+            struct AvenirNext {
+                static let regular = "AvenirNext-Regular"
+            }
+        }
+        
+        struct Size {
+            static let big: CGFloat     = 20
+            static let regular: CGFloat = 12
+        }
+    }
+    
+    struct Map {
+        
+        struct Center {
+            static let latitude  = 1.35735
+            static let longitude = 103.82
+        }
+        
+        static let regionRadius: CLLocationDistance = 50000
+        static let annotationRadius                 = 20
     }
     
     struct JSONKey {
@@ -89,6 +131,12 @@ struct AppConstant {
             static let east     = "east"
             static let west     = "west"
             static let central  = "central"
+        }
+        
+        struct Error {
+            static let message = "message"
+            static let fault = "fault"
+            static let faultString = "faultstring"
         }
     }
 }

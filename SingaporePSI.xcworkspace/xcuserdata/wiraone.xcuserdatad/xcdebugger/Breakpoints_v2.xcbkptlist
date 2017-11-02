@@ -10,11 +10,59 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SingaporePSITests/Services/ApiManagerSpec.swift"
-            timestampString = "531164762.074701"
+            timestampString = "531318604.96401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
+            landmarkName = "spec()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SingaporePSITests.ApiManagerSpec.(spec () -&gt; ()).(closure #1).(closure #3).(closure #2).(closure #1).(closure #1)"
+                  moduleName = "SingaporePSITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/SingaporePSI/SingaporePSITests/Services/ApiManagerSpec.swift"
+                  timestampString = "531318273.446434"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "235"
+                  endingLineNumber = "235"
+                  offsetFromSymbolStart = "121">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SingaporePSITests.ApiManagerSpec.(spec () -&gt; ()).(closure #1).(closure #3).(closure #2).(closure #1).(closure #1)"
+                  moduleName = "SingaporePSITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/SingaporePSI/SingaporePSITests/Services/ApiManagerSpec.swift"
+                  timestampString = "531318273.450131"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "235"
+                  endingLineNumber = "235"
+                  offsetFromSymbolStart = "321">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SingaporePSITests/Services/ApiManagerSpec.swift"
+            timestampString = "531318604.96401"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "spec()"
             landmarkType = "7">
          </BreakpointContent>

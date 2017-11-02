@@ -48,5 +48,23 @@ class InputFormSpec: QuickSpec {
                 }
             }
         }
+        
+        describe("Validate input form data empty") {
+            beforeEach {
+                inputForm = InputForm()
+                inputForm?.date = ""
+                inputForm?.dateTime = ""
+                isInputValid = inputForm!.isValid()
+            }
+            
+            context("when input form date has been set") {
+                
+                it("should have valid input form") {
+                    expect(inputForm?.date.isEmpty).to(beTrue())
+                    expect(inputForm?.dateTime.isEmpty).to(beTrue())
+                    expect(isInputValid).to(beFalse())
+                }
+            }
+        }
     }
 }

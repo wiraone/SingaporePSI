@@ -19,7 +19,7 @@ typealias APIParams = [String: AnyObject]?
 protocol APIConfiguration {
     var method: Alamofire.HTTPMethod { get }
     var encoding: Alamofire.ParameterEncoding? { get }
-    var parameters: APIParams { get }
+    var parameters: APIParams? { get }
     var isAuthorized: Bool { get }
 }
 
@@ -43,7 +43,7 @@ class BaseRouter : URLRequestConvertible, APIConfiguration {
         fatalError("[\(String(describing: self))) - \(#function))] Must be overridden in subclass")
     }
     
-    var parameters: APIParams {
+    var parameters: APIParams? {
         fatalError("[\(String(describing: self))) - \(#function))] Must be overridden in subclass")
     }
     
@@ -65,7 +65,7 @@ class BaseRouter : URLRequestConvertible, APIConfiguration {
         
         if let encoding = encoding {
             do {
-                return try encoding.encode(request, with: parameters)
+                return try encoding.encode(request, with: parameters ?? nil)
             }
             catch {
             }

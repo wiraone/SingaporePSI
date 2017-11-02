@@ -28,7 +28,7 @@ class PSIRouter : BaseRouter {
         }
     }
     
-    override var parameters: APIParams {
+    override var parameters: APIParams? {
         switch endpoint {
         case .fetchData(let input):
             var param: APIParams = [:]
@@ -45,9 +45,13 @@ class PSIRouter : BaseRouter {
         }
     }
     
+    override var isAuthorized: Bool {
+        return true
+    }
+    
     override var encoding: Alamofire.ParameterEncoding? {
         switch endpoint {
-        case .fetchData: return JSONEncoding.default
+        case .fetchData: return URLEncoding.default
         }
     }
 }

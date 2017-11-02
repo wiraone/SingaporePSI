@@ -12,10 +12,12 @@ import Gloss
 struct PSIData: Glossy {
     var regionMetadata: [RegionMetadata]?
     var items: [Item]?
+    var fault: Fault?
     
     init?(json: JSON) {
         self.regionMetadata = parseRegionMetadata(jsons: AppConstant.JSONKey.Metadata.region <~~ json)
         self.items = parseItemMetadata(jsons: AppConstant.JSONKey.Metadata.items <~~ json)
+        self.fault = Fault.init(json: AppConstant.JSONKey.Error.fault <~~ json ?? AppConstant.Default.emptyJSON)
     }
     
     func parseRegionMetadata(jsons: [JSON]?) -> [RegionMetadata]{
