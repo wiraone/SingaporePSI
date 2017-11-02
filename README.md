@@ -126,6 +126,9 @@ class ApiManagerSpec: QuickSpec {
     }
 }
 ```
+## Code Coverage
+
+![code coverage](https://github.com/wiraone/SingaporePSI/blob/master/Screenshot/Screen%20Shot%202017-11-03%20at%2000.51.14.png)
 
 ## Built With
 
