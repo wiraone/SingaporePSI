@@ -17,7 +17,7 @@
         <scene sceneID="i5E-j5-wxW">
             <objects>
                 <navigationController id="B9C-1w-DmR" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="dyx-CM-1Ui">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dyx-CM-1Ui">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,32 +51,42 @@
                                     <outlet property="delegate" destination="QpU-mG-M23" id="4WY-cn-Y1P"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgt-NS-ih2">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="jYY-Wx-9ZR">
                                 <rect key="frame" x="0.0" y="553" width="375" height="50"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCw-BC-7iW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="we1-KJ-bcJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="2Ee-gG-goj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="ic_date_range">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="GkJ-dT-hWG" firstAttribute="top" secondItem="jYY-Wx-9ZR" secondAttribute="bottom" id="2ZM-BJ-Df2"/>
                             <constraint firstAttribute="trailing" secondItem="lTS-IL-AxH" secondAttribute="trailing" id="DvA-97-xqK"/>
-                            <constraint firstItem="Wgt-NS-ih2" firstAttribute="top" secondItem="lTS-IL-AxH" secondAttribute="bottom" id="FjD-l8-i42"/>
                             <constraint firstItem="lTS-IL-AxH" firstAttribute="leading" secondItem="Tqa-m3-Rgg" secondAttribute="leading" id="Uxa-f9-cbA"/>
                             <constraint firstItem="lTS-IL-AxH" firstAttribute="top" secondItem="fUQ-xO-yMO" secondAttribute="bottom" id="VWU-4c-hlN"/>
-                            <constraint firstAttribute="trailing" secondItem="Wgt-NS-ih2" secondAttribute="trailing" id="VvP-a4-Hai"/>
-                            <constraint firstItem="GkJ-dT-hWG" firstAttribute="top" secondItem="Wgt-NS-ih2" secondAttribute="bottom" id="dvV-KS-mnn"/>
-                            <constraint firstItem="Wgt-NS-ih2" firstAttribute="leading" secondItem="Tqa-m3-Rgg" secondAttribute="leading" id="h2w-M2-MZT"/>
+                            <constraint firstAttribute="trailing" secondItem="jYY-Wx-9ZR" secondAttribute="trailing" id="gLy-1P-scR"/>
+                            <constraint firstItem="jYY-Wx-9ZR" firstAttribute="top" secondItem="lTS-IL-AxH" secondAttribute="bottom" id="i7K-M8-GhE"/>
+                            <constraint firstItem="jYY-Wx-9ZR" firstAttribute="leading" secondItem="Tqa-m3-Rgg" secondAttribute="leading" id="uWm-hn-7Nn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="NiO-sZ-FI5"/>
+                    <navigationItem key="navigationItem" id="NiO-sZ-FI5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="H5l-ut-nr9">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="didTapRefreshButtonWithSender:" destination="QpU-mG-M23" id="OWH-fy-2Vb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="dateLabel" destination="SCw-BC-7iW" id="aKk-Ur-ClQ"/>
                         <outlet property="mapView" destination="lTS-IL-AxH" id="c1h-Av-atU"/>
                     </connections>
                 </viewController>
@@ -85,7 +95,4 @@
             <point key="canvasLocation" x="-23.199999999999999" y="25.637181409295355"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="ic_date_range" width="24" height="24"/>
-    </resources>
 </document>

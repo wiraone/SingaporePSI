@@ -53,10 +53,12 @@ struct AppConstant {
     }
     
     struct Default {
-        static let emptyString     = ""
-        static let emptyNumber     = 0.0
-        static let emptyJSON: JSON = [:]
-        static let title           = "Pollutant Standart Index"
+        static let emptyString           = ""
+        static let emptyNumber           = 0.0
+        static let emptyJSON: JSON       = [:]
+        static let title                 = "Pollutant Standart Index"
+        static let navigationBarTitle    = "PSI 24 Hour"
+        static let activityIndicatorSize = 30
     }
     
     struct Font {

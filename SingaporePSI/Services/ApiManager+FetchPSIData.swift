@@ -18,7 +18,6 @@ extension APIManager {
         
         //validate codes including those from API for custom errors
         return manager.request(router)
-            .validate()
             .responseJSON(completionHandler: {
                 (response) -> Void in
                 
@@ -28,16 +27,7 @@ extension APIManager {
 
                         if let value = response.result.value as? JSON {
                             let data = PSIData.init(json: value)
-                            
-                            if let _ = data?.fault?.faultString?.isEmpty {
-                                completion(data, nil)
-                            }
-                            else {
-                                let errorHandler = PSIErrorHandler.init()
-                                errorHandler.errorCode = AppConstant.API.Error.Code.internalServerError
-                                errorHandler.errorMessage = AppConstant.API.Error.Message.internalServerError
-                                completion(nil, errorHandler)
-                            }
+                            completion(data, nil)
                         }
                         else{
                             let error = PSIErrorHandler.init()
@@ -55,6 +45,15 @@ extension APIManager {
                             }
                         }
                         completion(nil, errorHandler)
+                    case 500:
+                        if let value = response.result.value as? JSON {
+                            let data = PSIData.init(json: value)
+                            
+                            let errorHandler = PSIErrorHandler.init()
+                            errorHandler.errorCode = statusCode
+                            errorHandler.errorMessage = data?.fault?.faultString ?? AppConstant.Default.emptyString
+                            completion(nil, errorHandler)
+                        }
                     default:
                         let errorHandler = PSIErrorHandler.init()
                         errorHandler.errorCode = statusCode

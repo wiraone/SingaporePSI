@@ -9,7 +9,17 @@
 import UIKit
 import MapKit
 
+
+enum Direction: String {
+    case north = "north"
+    case south = "south"
+    case west = "west"
+    case east = "east"
+    case center = "center"
+}
+
 class CustomAnnotation: MKPointAnnotation {
+    var direction: Direction = .center
     var annotations = [MKAnnotation]()
 }
 
@@ -19,7 +29,6 @@ class CustomAnnotationView: MKAnnotationView {
         label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         label.backgroundColor = .clear
         label.font = Utility.setFont(AppConstant.Font.Name.AvenirNext.regular, size: AppConstant.Font.Size.regular)
-        label.textColor = .white
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 2
@@ -28,9 +37,9 @@ class CustomAnnotationView: MKAnnotationView {
         return label
     }()
     
-    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
+    public init(annotation: MKAnnotation?, reuseIdentifier: String?, data: PSIData?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        configure(with: nil)
+        configure(with: data)
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -38,12 +47,38 @@ class CustomAnnotationView: MKAnnotationView {
     }
     
     open func configure(with data: PSIData?) {
-        guard let _ = annotation as? CustomAnnotation else { return }
+        guard let customAnnotation = annotation as? CustomAnnotation else { return }
         
-        backgroundColor = UIColor.black
+        backgroundColor = .white
         let diameter = AppConstant.Map.annotationRadius * 2
         frame = CGRect(origin: frame.origin, size: CGSize(width: diameter, height: diameter))
-        countLabel.text = "100"
+        switch customAnnotation.direction {
+        case .north:
+            let value = data?.items?.last?.readings?.psiTwentyFourHourly?.north ?? AppConstant.Default.emptyNumber
+            countLabel.textColor = Utility.setHazardousColorFrom(value)
+            countLabel.text = String.init(describing: value)
+            break
+        case .south:
+            let value = data?.items?.last?.readings?.psiTwentyFourHourly?.south ?? AppConstant.Default.emptyNumber
+            countLabel.textColor = Utility.setHazardousColorFrom(value)
+            countLabel.text = String.init(describing: value)
+            break
+        case .west:
+            let value = data?.items?.last?.readings?.psiTwentyFourHourly?.west ?? AppConstant.Default.emptyNumber
+            countLabel.textColor = Utility.setHazardousColorFrom(value)
+            countLabel.text = String.init(describing: value)
+            break
+        case .east:
+            let value = data?.items?.last?.readings?.psiTwentyFourHourly?.east ?? AppConstant.Default.emptyNumber
+            countLabel.textColor = Utility.setHazardousColorFrom(value)
+            countLabel.text = String.init(describing: value)
+            break
+        case .center:
+            let value = data?.items?.last?.readings?.psiTwentyFourHourly?.central ?? AppConstant.Default.emptyNumber
+            countLabel.textColor = Utility.setHazardousColorFrom(value)
+            countLabel.text = String.init(describing: value)
+            break
+        }        
     }
     
     override open func layoutSubviews() {

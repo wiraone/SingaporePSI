@@ -34,4 +34,45 @@ struct Utility {
     static func setFont(_ name: String, size: CGFloat) -> UIFont? {
         return UIFont.init(name: name, size: size)
     }
+    
+    static func isRegionNameNational(name: String) -> Bool {
+        if name == AppConstant.JSONKey.Content.national {
+            return true
+        }
+        return false
+    }
+    
+    static func convertRegiontoDirection(regionName: String) -> Direction {
+        if Direction.north.rawValue == regionName {
+            return .north
+        }
+        else if Direction.south.rawValue == regionName {
+            return .south
+        }
+        else if Direction.west.rawValue == regionName {
+            return .west
+        }
+        else if Direction.east.rawValue == regionName {
+            return .east
+        }
+        else {
+            return .center
+        }
+    }
+    
+    static func setHazardousColorFrom(_ value: Double) -> UIColor {
+        
+        switch value {
+        case 0...50:
+            return .green
+        case 51...100:
+            return .blue
+        case 101...200:
+            return .yellow
+        case 201...300:
+            return .orange
+        default:
+            return .red
+        }
+    }
 }

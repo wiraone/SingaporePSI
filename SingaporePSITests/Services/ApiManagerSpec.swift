@@ -48,7 +48,7 @@ class ApiManagerSpec: QuickSpec {
                                         if let value = response.result.value as? JSON {
                                             self.psiData = PSIData.init(json: value)
                                             
-                                            if let _ = self.psiData?.fault?.faultString {
+                                            if  self.psiData?.fault?.faultString == nil {
                                                 let errorHandler = PSIErrorHandler.init()
                                                 errorHandler.errorCode = AppConstant.API.Error.Code.internalServerError
                                                 errorHandler.errorMessage = AppConstant.API.Error.Message.internalServerError
@@ -169,8 +169,7 @@ class ApiManagerSpec: QuickSpec {
             context("Test API Request failed internal server error") {
                 
                 beforeEach() {
-                    let data = self.loadJSONPayload(fileName: "PSI Internal Server Error")
-                    MockingjayProtocol.addStub(matcher: http(.get, uri: AppConstant.API.baseURL), builder: json(data!))
+                    self.stub(everything, http(500))
                 }
                 
                 it("Return data JSON formmatted") {
@@ -179,34 +178,23 @@ class ApiManagerSpec: QuickSpec {
                         let router = PSIRouter(endpoint: PSIEndpoint.fetchData(param: param))
                         
                         APIManager.sharedInstance.manager.request(router)
-                            .validate()
                             .responseJSON(completionHandler: {
                                 (response) -> Void in
                                 
                                 if let statusCode: Int = (response.response?.statusCode) {
                                     switch statusCode {
-                                    case 200 ... 299:
+                                    case 500:
                                         
-                                        if let value = response.result.value as? JSON {
-                                            self.psiData = PSIData.init(json: value)
-                                            
-                                            if let _ = self.psiData?.fault?.faultString {
-                                                let errorHandler = PSIErrorHandler.init()
-                                                errorHandler.errorCode = AppConstant.API.Error.Code.internalServerError
-                                                errorHandler.errorMessage = AppConstant.API.Error.Message.internalServerError
-                                            }
-                                        }
-                                        else{
-                                            self.psiData = nil
-                                        }
+                                        self.psiErrorHandler = PSIErrorHandler.init()
+                                        self.psiErrorHandler?.errorCode = statusCode
+                                        self.psiErrorHandler?.errorMessage = AppConstant.API.Error.Message.quotaExceedLimit
+                                        
                                     default:
                                         self.psiData = nil
                                     }
                                 }
-                                
-                                expect(self.psiData?.regionMetadata?.count == 0).to(beTrue())
-                                expect(self.psiData?.items?.count == 0).to(beTrue())
-                                expect(self.psiData?.fault?.faultString).to(equal(AppConstant.API.Error.Message.quotaExceedLimit))
+                              
+                                expect(self.psiErrorHandler?.errorMessage).to(equal(AppConstant.API.Error.Message.quotaExceedLimit))
                                 done()
                             })
                     }
