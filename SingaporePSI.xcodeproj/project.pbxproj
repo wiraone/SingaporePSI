@@ -10,6 +10,7 @@
 		416D83F0A5F9AC86335E5692 /* Pods_SingaporePSI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837ED393F57142864E60315C /* Pods_SingaporePSI.framework */; };
 		A83FB0941FAB47A4004818E4 /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83FB0931FAB47A4004818E4 /* UIApplication+TopViewController.swift */; };
 		A83FB0961FAB54BE004818E4 /* String+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83FB0951FAB54BE004818E4 /* String+DateFormatter.swift */; };
+		A83FB0991FABE829004818E4 /* String+DateFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83FB0981FABE829004818E4 /* String+DateFormatterSpec.swift */; };
 		A85972A81F96F3CD009BEB95 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85972A71F96F3CD009BEB95 /* DashboardViewController.swift */; };
 		A85DCA0D1FA9A900008E9E03 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85DCA0C1FA9A900008E9E03 /* CustomAnnotationView.swift */; };
 		A86E0A821FA819F5000D2CA2 /* DashboardViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E0A811FA819F5000D2CA2 /* DashboardViewControllerSpec.swift */; };
@@ -60,6 +61,7 @@
 		867BF49E476F0EC0BCE9F899 /* Pods-SingaporePSITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingaporePSITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingaporePSITests/Pods-SingaporePSITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A83FB0931FAB47A4004818E4 /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
 		A83FB0951FAB54BE004818E4 /* String+DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+DateFormatter.swift"; sourceTree = "<group>"; };
+		A83FB0981FABE829004818E4 /* String+DateFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+DateFormatterSpec.swift"; sourceTree = "<group>"; };
 		A85972A71F96F3CD009BEB95 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		A85DCA0C1FA9A900008E9E03 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		A86BC42C1FA8083D00701EE8 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,6 +271,7 @@
 			children = (
 				A86E0AAF1FA8D139000D2CA2 /* InputFormSpec.swift */,
 				A86E0AB11FA8DB6B000D2CA2 /* UtilitySpec.swift */,
+				A83FB0981FABE829004818E4 /* String+DateFormatterSpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				A86E0A821FA819F5000D2CA2 /* DashboardViewControllerSpec.swift in Sources */,
 				A86E0AB01FA8D139000D2CA2 /* InputFormSpec.swift in Sources */,
 				A86E0A881FA823C9000D2CA2 /* ApiManagerSpec.swift in Sources */,
+				A83FB0991FABE829004818E4 /* String+DateFormatterSpec.swift in Sources */,
 				A86E0AB21FA8DB6B000D2CA2 /* UtilitySpec.swift in Sources */,
 				A86E0A921FA8541D000D2CA2 /* XCTest+FileManagement.swift in Sources */,
 			);

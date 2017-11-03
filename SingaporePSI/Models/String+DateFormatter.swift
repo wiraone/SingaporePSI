@@ -12,6 +12,6 @@ extension String {
     func cleanDateFormat() -> String {
         let cleanString = self.replacingOccurrences(of: "T", with: " ")
         let splitString = cleanString.components(separatedBy: "+")
-        return splitString.count > 0 ? (splitString.first ?? AppConstant.Default.emptyString) : AppConstant.Default.emptyString
+        return splitString.first ?? AppConstant.Default.emptyString
     }
 }
